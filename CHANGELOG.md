@@ -16,3 +16,4 @@
 ### 14-08-2026
 -Added semantic structure to gallery.html and content
 -Added CSS styling
+-Committed All the changes
