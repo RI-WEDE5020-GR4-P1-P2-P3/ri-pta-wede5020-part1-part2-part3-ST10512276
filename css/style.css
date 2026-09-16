@@ -73,3 +73,19 @@ footer {
     padding: 1.2em;
     margin-top: 2em;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    margin: 0.75em 0;
+}
+
+.page-image {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
