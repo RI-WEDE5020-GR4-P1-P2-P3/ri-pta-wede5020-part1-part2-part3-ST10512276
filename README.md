@@ -30,6 +30,8 @@ Open index.html in a browser, or use the VS Code "Live Server" extension.
 
 ## Repository Structure
 ri-pta-wede5020-part1-part2-part3-ST10512276
+├── docs/
+│   └── sitemap.png
 ├── index.html
 ├── about.html
 ├── menu.html
@@ -43,5 +45,5 @@ ri-pta-wede5020-part1-part2-part3-ST10512276
 └── CHANGELOG.md
 
 ## References
-usersnapblog.,2026. Best feedback template 2026.[online].Available at:Google<https://usersnap.com/blog/feedback-form/amp/ >.[Accessed 12 August 2026]
-w3school,2026.HTML-CSS.[video online].Available at: <https://www.w3schools.com/html/>.[Accessed 13 August 2026]
+usersnapblog.,2026.Best feedback template 2026.[online].Available at:Google<https://usersnap.com/blog/feedback-form/amp/ >.[Accessed 12 August 2026]
+w3school,2026.HTML-CSS.[video online].Available at:<https://www.w3schools.com/html/>.[Accessed 13 August 2026]
