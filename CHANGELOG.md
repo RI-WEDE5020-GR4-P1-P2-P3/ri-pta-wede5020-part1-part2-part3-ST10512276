@@ -17,3 +17,8 @@
 -Added semantic structure to gallery.html and content
 -Added CSS styling
 -Committed All the changes
+
+### 15-09-2026
+-Added missing sitemap diagram to docs folder
+-Fixed oversized images appearance on Home,About Us and Contact page by adding image sizing rules to style.css
+-Added the embedded Google Map on contact.html
