@@ -26,7 +26,12 @@
     <main>
         <section>
             <h2>Welcome to Rosebank Cafeteria</h2>
-            <img src="image/Homepage.png" alt="CAFETERIA"> <!-- This image is AI generated -->
+            <img
+        src="image/Homepage.png"
+        srcset="image/Homepage-small.png 500w, image/Homepage.png 1000w"
+        sizes="(max-width: 600px) 100vw, 850px"
+        alt="Interior of Rosebank Cafeteria"
+        class="hero-image"> <!-- This image is AI generated -->
         </section>
 
         <section>
@@ -42,14 +47,14 @@
         <section>
             <h2>Opening hours</h2>
             <p>Weekdays: 8am to 5pm</p>
-            <p>Sartuday: 8am to 1pm</p>
+            <p>Saturday: 8am to 1pm</p>
             <p>Sunday: CLOSED</p>
         </section>
 
         <section>
             <h2>MENU</h2>
             <p><b>Hungry? Start Here, Choose Your Meal</b></p>
-            <a href="menu.html" class="cta button">VIEW MENU</a> <!-- Used this to make a clickable button -->
+            <a href="menu.html" class="cta-button">VIEW MENU</a> <!-- Used this to make a clickable button -->
         </section>
     </main>
 
