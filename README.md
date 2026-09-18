@@ -45,6 +45,7 @@ ri-pta-wede5020-part1-part2-part3-ST10512276
 └── CHANGELOG.md
 
 Responsive Testing
+The site was tested at three breakpoints using browser DevTools
 ![Desktop view](docs/Screenshots/Desktop.png)
 ![Tablet view](docs/Screenshots/Tablet.png)
 ![Mobile view](docs/Screenshots/Mobile.png)
