@@ -35,12 +35,19 @@
         <section>
             <form>
                 <h2>Feedback Form</h2>
-                <p>NAME: <input type="text"></p> <br/>
-                <p>EMAIL (Optional): <br><input type="email"></p>
+                <p>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name">
+                </p>
+
+                <p>
+                    <label for="email">Email (Optional):</label><br>
+                    <input type="email" id="email" name="email">
+                </p>
 
                 <fieldset>
                     <legend>How Would You Rate Your Experience At The Cafeteria?</legend>
-                    <table width="35%"><tr><td>POOR</td><td align="right">EXCELLENT</td></tr></table>
+                    <p class="scale-labels"><span>POOR</span><span>EXCELLENT</span></p>
                     <label><input type="radio" name="rating" value="0" required> 0</label>
                     <label><input type="radio" name="rating" value="1"> 1</label>
                     <label><input type="radio" name="rating" value="2"> 2</label>
