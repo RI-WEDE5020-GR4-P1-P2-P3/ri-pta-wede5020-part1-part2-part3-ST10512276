@@ -44,6 +44,15 @@ ri-pta-wede5020-part1-part2-part3-ST10512276
 ├── README.md
 └── CHANGELOG.md
 
+Responsive Testing
+![Desktop view](docs/Screenshots/Desktop.png)
+![Tablet view](docs/Screenshots/Tablet.png)
+![Mobile view](docs/Screenshots/Mobile.png)
+
 ## References
-usersnapblog.,2026.Best feedback template 2026.[online].Available at:Google<https://usersnap.com/blog/feedback-form/amp/ >.[Accessed 12 August 2026]
-w3school,2026.HTML-CSS.[video online].Available at:<https://www.w3schools.com/html/>.[Accessed 13 August 2026]
+DataFlair, n.d. CSS Responsive Web Design Tutorial. [online] Available at: <https://data-flair.training/blogs/css-responsive-design/> [Accessed 18 September 2026].
+Google, 2026. Google Maps. [online] Available at: <https://www.google.com/maps> [Accessed 15 September 2026].
+Refine, n.d. Rem vs Em in CSS: What's the Difference? [online] Available at: <https://refine.dev/blog/rem-vs-em/> [Accessed 17 September 2026].
+Usersnap Blog, 2026. Best feedback template 2026. [online] Available at: <https://usersnap.com/blog/feedback-form/amp/> [Accessed 12 August 2026].
+W3Schools, n.d. CSS Tutorial. [online] Available at: <https://www.w3schools.com/css/> [Accessed 16 September 2026].
+W3Schools, n.d. HTML-CSS. [video online] Available at: <https://www.w3schools.com/html/> [Accessed 13 August 2026].
