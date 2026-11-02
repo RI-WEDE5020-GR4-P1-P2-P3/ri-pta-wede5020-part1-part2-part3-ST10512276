@@ -3,30 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosebank International Cafeteria | ABOUT US</title>
+    <!-- Security: only allow content from my own files, jQuery and Google Maps -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com; style-src 'self'; img-src 'self' data:; frame-src https://www.google.com; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>About Us | Rosebank International Cafeteria</title>
+    <meta name="description" content="Learn about the Rosebank International Cafeteria,
+     the on-campus dining facility serving students and staff with fresh, affordable meals, snacks and drinks.">
+    <!-- Open Graph tags, used when the page is shared on social media -->
+    <meta property="og:title" content="Rosebank International Cafeteria | Affordable Student Meals">
+    <meta property="og:description" content="Fresh, affordable breakfast, lunch, snacks and drinks at the Pretoria Campus.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image/Homepage.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
     <header>
+        <div class="header-top">
+            <a href="index.html">
+                <img src="image/rosebank-international-cafeteria-logo.png" alt="Rosebank International Cafeteria" class="site-logo">
+            </a>
+            <div class="header-text">
         <h1>ROSEBANK INTERNATIONAL CAFETERIA</h1>
     <p><b>GREAT TASTE, FRIENDLY PRICES, HAPPY YOU. </b></p>
+            </div>
+        </div>
     </header>
     <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776; MENU</label>
+
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT US</a></li>
             <li><a href="menu.html">MENU</a></li>
+            <li><a href="enquiry.html">ENQUIRY</a></li>
             <li><a href="gallery.html">GALLERY</a></li>
             <li><a href="feedback.html">FEEDBACK</a></li>
             <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="cart.html">CART (<span id="cart-count">0</span>)</a></li>
         </ul>
     </nav>
 
     <main>
         <section>
-            <h2>Welcome to Rosebank Cafeteria</h2>
-            <img src="image/AboutGeneratedimage.png" alt="About" class="page-image">
+            <h2>About Rosebank International Cafeteria</h2>
+            <img src="image/rosebank-cafeteria-about-us.png" alt="About" class="page-image">
         </section>
 
         <section>
@@ -49,13 +71,68 @@
             <p>We are not in just one place, we are on two floors!
                 Find us on the Ground Floor and Second Floor.
                 <strong>Make it easier than ever to grab your meals!</strong>
+                See our <a href="contact.html" class="text-link">Contact page</a>for directions.</p
             </p>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="accordion">
+                <button class="accordion-title">What time do you open?</button>
+                <div class="accordion-content">
+                    <p>We are open from 8am to 5pm on weekdays and 8am to 1pm on Saturdays. We are closed on Sundays.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-title">Where can I find the cafeteria?</button>
+                <div class="accordion-content">
+                    <p>We are on two floors, the Ground Floor and the Second Floor.
+                        You can visit either location to enjoy our food and services.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-title">Can I plan my meal online?</button>
+                <div class="accordion-content">
+                    <p>Yes! Visit our <a href="menu.html" class="text-link">Menu page</a> to explore our meals and prices before visiting.
+                        You can also place your order online and collect it in person at the cafeteria.
+                    </p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-title">Are your prices affordable?</button>
+                <div class="accordion-content">
+                    <p>Yes! We aim to provide delicious food at friendly prices, and our snacks start from R6.</p>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <button class="accordion-title">Can I suggest new meals or drinks for the menu?</button>
+                <div class="accordion-content">
+                    <p>Yes! Please tell us on our <a href="feedback.html" class="text-link">Feedback page</a>.</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Rosebank International Cafeteria. All rights reseverd.</p>
+    <p class="social-links">
+        Follow us:
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" id="share-whatsapp" target="_blank" rel="noopener">Share on WhatsApp</a>
+    </p>
+    <p>&copy; 2026 Rosebank International Cafeteria. All rights reserved.</p>
     </footer>
+
+    <button class="back-to-top">&#8593; TOP</button>
+    
+    <!-- jQuery library and custom JavaScript file for website interactivity -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script src="js/script.js"></script>
 
 </body>
 </html>
