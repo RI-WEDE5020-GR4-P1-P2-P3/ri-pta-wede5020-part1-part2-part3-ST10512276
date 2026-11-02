@@ -3,118 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosebank International Cafeteria | MENU</title>
+    <!-- Security: only allow content from my own files, jQuery and Google Maps -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com; style-src 'self'; img-src 'self' data:; frame-src https://www.google.com; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Rosebank Cafeteria Menu and Prices | Student Meals</title>
+    <meta name="description" content="See the Rosebank Cafeteria menu and prices.
+     Choose from breakfast, lunch, snacks and drinks.">
+    <!-- Open Graph tags, used when the page is shared on social media -->
+    <meta property="og:title" content="Rosebank International Cafeteria | Affordable Student Meals">
+    <meta property="og:description" content="Fresh, affordable breakfast, lunch, snacks and drinks at the Pretoria Campus.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image/Homepage.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     
-    <header>
+   <header>
+        <div class="header-top">
+            <a href="index.html">
+                <img src="image/rosebank-international-cafeteria-logo.png" alt="Rosebank International Cafeteria" class="site-logo">
+            </a>
+            <div class="header-text">
         <h1>ROSEBANK INTERNATIONAL CAFETERIA</h1>
     <p><b>GREAT TASTE, FRIENDLY PRICES, HAPPY YOU. </b></p>
+            </div>
+        </div>
     </header>
     <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776; MENU</label>
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT US</a></li>
             <li><a href="menu.html">MENU</a></li>
+            <li><a href="enquiry.html">ENQUIRY</a></li>
             <li><a href="gallery.html">GALLERY</a></li>
             <li><a href="feedback.html">FEEDBACK</a></li>
             <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="cart.html">CART (<span id="cart-count">0</span>)</a></li>
         </ul>
     </nav>
 
     <main>
         <section>
             <h2>Our Menu</h2>
-            <p>Great taste starts here.Fresh food is made daily at a friendly price.Breakfast, Lunch, Snack and Drinks
-                See what's on offer.
-            </p>
+            <p>Great taste starts here. Fresh food is made daily at a friendly price. Breakfast, Lunch, Snack and Drinks.
+                See what's on offer.</p>
+
+            <div class="menu-tools">
+                <label for="search-box">Search the menu:</label>
+                <input type="search" id="search-box" class="form-box" placeholder="Type a meal, e.g. chips">
+
+                <label for="sort-select">Sort by:</label>
+                <select id="sort-select" class="form-box">
+                    <option value="default">Default order</option>
+                    <option value="price-low">Price: low to high</option>
+                    <option value="price-high">Price: high to low</option>
+                    <option value="name">Name: A to Z</option>
+                </select>
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-button active" data-category="all">All</button>
+                <button class="filter-button" data-category="breakfast">Breakfast</button>
+                <button class="filter-button" data-category="lunch">Lunch</button>
+                <button class="filter-button" data-category="snacks">Snacks</button>
+                <button class="filter-button" data-category="drinks">Drinks</button>
+            </div>
         </section>
+
         <div class="menu-grid">
 
-            <section>
+            <section class="menu-category" data-category="breakfast">
                 <h2>Breakfast</h2>
                 <div class="menu-item">
-                    <img src="image/English-breakfast-fried-eggs-beans-bacon-toast_106006-5319.jpg" alt="Full breakfast with eggs, beans, bacon and toast" width="300" height="200">
+                    <img src="image/english-breakfast-fried-eggs-beans-bacon-toast_106006-5319.jpg" alt="Full breakfast with eggs, beans, bacon and toast" width="300" height="200" loading="lazy">
                     <p><strong>Full Breakfast</strong> <span class="price">R55</span></p>
                 </div>
 
                 <div class="menu-item">
-                    <img src="image/Toast bread.jpg" alt="Toasted sandwich" width="300" height="200">
+                    <img src="image/toast-bread.jpg" alt="Toasted sandwich" width="300" height="200" loading="lazy">
                     <p><strong>Toasted Sandwich</strong> <span class="price">R25</span></p>
                 </div>
 
                 <div class="menu-item">
-                    <img src="image/muffins-1-2-500x375.jpg" alt="Four muffins with coffee or tea" width="300" height="200">
+                    <img src="image/muffins-1-2-500x375.jpg" alt="Four muffins with coffee or tea" width="300" height="200" loading="lazy">
                     <p><strong>Muffins (x4) and Coffee/Tea</strong> <span class="price">R18</span></p>
                 </div>
             </section>
 
-            <section>
+            <section class="menu-category" data-category="lunch">
                 <h2>Lunch</h2>
-
                 <div class="menu-item">
-                    <img src="image/chickenandmayosandwich-500x500.jpg" alt="Chicken mayo sandwich" width="300" height="200">
+                    <img src="image/chickenand-mayo-sandwich-500x500.jpg" alt="Chicken mayo sandwich" width="300" height="200" loading="lazy">
                     <p><strong>Chicken Mayo Sandwich</strong> <span class="price">R30</span></p>
                 </div>
 
                 <div class="menu-item">
-                    <img src="image/burger_beef_chips.png" alt="Beef or chicken burger with chips" width="300" height="200">
+                    <img src="image/burger-beef-chips.png" alt="Beef or chicken burger with chips" width="300" height="200" loading="lazy">
                     <p><strong>Beef/Chicken Burger, Chips</strong> <span class="price">R45</span></p>
                 </div>
 
                 <div class="menu-item">
+                    <img src="image/meal.jpg" alt="2 mini loafs, chicken and chips" width="300" height="200" loading="lazy">
                     <p><strong>2 Mini Loafs, Chicken and Chips</strong> <span class="price">R30</span></p>
                 </div>
             </section>
 
-            <section>
+            <section class="menu-category" data-category="snacks">
                 <h2>Snacks</h2>
-
                 <div class="menu-item">
                     <p><strong>Small Chips</strong> <span class="price">R10</span></p>
                 </div>
 
                 <div class="menu-item">
-                    <img src="image/Chips.png" alt="Large portion of chips" width="300" height="200">
+                    <img src="image/Chips.png" alt="Large portion of chips" width="300" height="200" loading="lazy">
                     <p><strong>Large Chips</strong> <span class="price">R25</span></p>
                 </div>
 
                 <div class="menu-item">
-                    <img src="image/Donuts.jpg" alt="Donut" width="300" height="200">
+                    <img src="image/donuts.jpg" alt="Donut" width="300" height="200" loading="lazy">
                     <p><strong>Donut</strong> <span class="price">R6</span></p>
                 </div>
 
                 <div class="menu-item">
-                    <img src="image/Donut Caramel-800x800-1.jpg" alt="Caramel donut" width="300" height="200">
+                    <img src="image/zimba-chips.png" alt="Zimba Chips" width="300" height="200" loading="lazy">
+                    <p><strong>Zimba Chips</strong> <span class="price">R8</span></p>
+                </div>
+
+                <div class="menu-item">
+                    <img src="image/donut-caramel-800x800-1.jpg" alt="Caramel donut" width="300" height="200" loading="lazy">
                     <p><strong>Caramel Donut</strong> <span class="price">R10</span></p>
+                </div>
+
+                <div class="menu-item">
+                    <img src="image/ice-cream.png" alt="Ice Cream" width="300" height="200" loading="lazy">
+                    <p><strong>Ice cream</strong> <span class="price">R12</span></p>
                 </div>
             </section>
 
-            <section>
+            <section class="menu-category" data-category="drinks"> 
                 <h2>Drinks</h2>
-
                 <div class="menu-item">
-                    <img src="image/Coffee.jpg" alt="Cup of coffee" width="300" height="200">
+                    <img src="image/Coffee.jpg" alt="Cup of coffee" width="300" height="200" loading="lazy">
                     <p><strong>Coffee</strong> <span class="price">R15</span></p>
                 </div>
 
                 <div class="menu-item">
+                    <img src="image/tea.jpg" alt="Cup of tea" width="300" height="200" loading="lazy">
                     <p><strong>Tea (Rooibos)</strong> <span class="price">R15</span></p>
                 </div>
 
                 <div class="menu-item">
-                    <img src="image/Juice.jpg" alt="Fruit juice, all flavours" width="300" height="200">
+                    <img src="image/fruit-juice.jpg" alt="Fruit juice, all flavours" width="300" height="200" loading="lazy">
                     <p><strong>Juice (All Flavours)</strong> <span class="price">R15</span></p>
                 </div>
 
                 <div class="menu-item">
-                    <img src="image/bonaqua-still-desktop.png" alt="Bottled water" width="300" height="200">
+                    <img src="image/bonaqua-still-desktop.png" alt="Bottled water" width="300" height="200" loading="lazy">
                     <p><strong>Water</strong> <span class="price">R7</span></p>
                 </div>
             </section>
 
         </div>
+            <p id="no-results">Sorry, no meals found. Please try a different word.</p>
 
         <section>
             <h2>Would you like to give Feedback?</h2>
@@ -122,8 +174,19 @@
         </section>
     </main>
    <footer>
-        <p>&copy; 2026 Rosebank International Cafeteria. All rights reseverd.</p>
+    <p class="social-links">
+        Follow us:
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" id="share-whatsapp" target="_blank" rel="noopener">Share on WhatsApp</a>
+    </p>
+    <p>&copy; 2026 Rosebank International Cafeteria. All rights reserved.</p>
     </footer>
 
+    <button class="back-to-top">&#8593; TOP</button>
+    
+    <!-- jQuery library and custom JavaScript file for website interactivity -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script src="js/script.js"></script>
 </body>
 </html>
