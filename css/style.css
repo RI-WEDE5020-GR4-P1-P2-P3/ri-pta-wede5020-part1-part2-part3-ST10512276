@@ -26,6 +26,25 @@ header {
 
 nav {
     background-color: #2b2b2b;
+    position: relative;
+}
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.site-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+    flex-shrink: 0;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
 }
 
 nav ul {
@@ -43,10 +62,24 @@ nav a {
     display: block;
     color: #ffff;
     padding: 1em 1.25em;
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
     background-color: #7a581d;
+}
+
+.menu-toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+.menu-icon {
+    display: none;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 1em 1.25em;
+    cursor: pointer;
 }
 
 main {
@@ -209,12 +242,20 @@ fieldset {
     margin-bottom: 0.5em;
 }
 
+/* Feedback form boxes fit the screen */
+.form-box {
+    width: 100%;
+    padding: 0.5em;
+    font-size: 1rem;
+}
+
 section {
     background-color: #ffffff;
     border: 1px solid #e8e8e8;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
     padding: 1.5em;
+    animation: fadeIn 0.8s ease;
 }
 
 .cta-button {
@@ -255,7 +296,367 @@ textarea:focus {
 .map-embed {
     border: 0;
     border-radius: 8px;
+    width: 100%;
+    height: 350px;
+    display: block;
 }
+
+/* FAQs accordion styles for the About Us page */
+.accordion {
+    margin-bottom: 0.75em;
+}
+
+.accordion-title {
+    width: 100%;
+    text-align: left;
+    background-color: #7a3e1d;
+    color: #ffffff;
+    padding: 0.8em 1em;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.accordion-title:hover {
+    background-color: #5c2f15;
+}
+
+.accordion-content {
+    display: none;
+    padding: 0.8em 1em;
+    background-color: #f5f5f5;
+}
+
+/* Zoom effect when hovering over menu and gallery images */
+.menu-item img,
+.gallery-item img {
+    transition: transform 0.3s ease;
+}
+
+.menu-item img:hover,
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+/* Fade-in animation when a page loads */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Back to Top button */
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7a3e1d;
+    color: #ffffff;
+    padding: 0.7em 1em;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: #5c2f15;
+}
+
+/* Open or Closed message on the Home page */
+.status-open {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.status-closed {
+    color: #b00020;
+    font-weight: bold;
+}
+
+/* Menu filter buttons */
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+.filter-button {
+    background-color: #ffffff;
+    color: #7a3e1d;
+    border: 2px solid #7a3e1d;
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.filter-button:hover,
+.filter-button.active {
+    background-color: #7a3e1d;
+    color: #ffffff;
+}
+
+/* Shows one category across the full width */
+.menu-grid.one-column {
+    grid-template-columns: 1fr;
+}
+
+/* Gallery lightbox */
+.gallery-item img {
+    cursor: pointer;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    text-align: center;
+    padding: 2em 1em;
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 75vh;
+    margin: 2em auto 0.5em auto;
+}
+
+.lightbox-caption {
+    color: #ffffff;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #ffffff;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* Popular meals loaded with JavaScript on the home page */
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+.popular-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    padding: 0.75em;
+    text-align: center;
+}
+
+.popular-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin: 0 0 0.5em 0;
+}
+
+/* Menu search and sort */
+.menu-tools {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    margin-top: 1em;
+}
+
+#no-results {
+    display: none;
+    text-align: center;
+    font-weight: bold;
+    color: #7a3e1d;
+}
+
+.popular-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25em;
+}
+
+/* Button under the map */
+.map-buttons {
+    margin-top: 1em;
+}
+
+/* Links inside page text */
+.text-link {
+    color: #7a3e1d;
+    text-decoration: underline;
+}
+
+.text-link:hover {
+    color: #5c2f15;
+}
+
+/* Social media links in the footer */
+.social-links a {
+    color: #ffffff;
+    text-decoration: underline;
+    margin-left: 1em;
+}
+
+.social-links a:hover {
+    color: goldenrod;
+}
+
+/* Form error and success messages */
+.error-message {
+    color: #b00020;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.form-box.invalid {
+    border: 2px solid #b00020;
+}
+
+.success-message {
+    color: #2e7d32;
+    font-weight: bold;
+}
+
+.char-count {
+    font-size: 0.85rem;
+    color: #555555;
+}
+
+/* Quote result on the Enquiry page */
+.result-box {
+    border: 2px solid #7a3e1d;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    padding: 1em;
+    margin-top: 1em;
+}
+
+.result-box.unavailable {
+    border-color: #b00020;
+}
+
+.result-box table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75em 0;
+}
+
+.result-box td {
+    padding: 0.4em 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.result-box td:last-child {
+    text-align: right;
+    font-weight: 600;
+}
+
+/* Add to Cart button on the Menu page */
+.menu-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.add-button {
+    background-color: #7a3e1d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.add-button:hover {
+    background-color: #5c2f15;
+}
+
+/* Cart page */
+.cart-wrap {
+    overflow-x: auto;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0.75em 0;
+}
+
+.cart-table th {
+    background-color: #7a3e1d;
+    color: #ffffff;
+    text-align: left;
+    padding: 0.6em;
+}
+
+.cart-table td {
+    padding: 0.6em;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.qty-button {
+    background-color: #7a3e1d;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    width: 2em;
+    height: 2em;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.qty-button:hover {
+    background-color: #5c2f15;
+}
+
+.remove-button {
+    background-color: #ffffff;
+    color: #b00020;
+    border: 2px solid #b00020;
+    border-radius: 6px;
+    padding: 0.3em 0.7em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.remove-button:hover {
+    background-color: #b00020;
+    color: #ffffff;
+}
+
+.cart-total {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #7a3e1d;
+    text-align: right;
+}
+
 /*RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
     .gallery-grid {
@@ -281,17 +682,34 @@ textarea:focus {
         grid-template-columns: 1fr;
     }
 
+    .menu-icon {
+        display: block;
+    }
+
     nav ul {
+        display: none;
         flex-direction: column;
         align-items: stretch;
+    }
+
+    .menu-toggle:checked ~ ul {
+        display: flex;
     }
 
     nav a {
         text-align: center;
     }
 
+    .site-logo {
+        width: 80px;
+    }
+
     h1 {
         font-size: 1.5rem;
+    }
+
+    .header-text h1 {
+        font-size: 1.1rem;
     }
 
     h2 {
@@ -307,8 +725,13 @@ textarea:focus {
         flex-direction: column;
         align-items: flex-start;
     }
+
     .menu-item img {
         max-width: 100%;
         max-height: 180px;
+    }
+
+    .popular-grid {
+    grid-template-columns: 1fr;
     }
 }
