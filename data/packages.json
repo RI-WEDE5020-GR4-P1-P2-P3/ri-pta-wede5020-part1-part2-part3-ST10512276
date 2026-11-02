@@ -1,0 +1,10 @@
+{
+    "discountFrom": 50,
+    "discountPercent": 10,
+    "packages": [
+        { "id": "breakfast", "name": "Breakfast Package", "includes": "Toasted sandwich and coffee or tea", "price": 40 },
+        { "id": "lunch", "name": "Lunch Package", "includes": "Chicken mayo sandwich and juice", "price": 45 },
+        { "id": "burger", "name": "Burger Package", "includes": "Beef or chicken burger, chips and juice", "price": 60 },
+        { "id": "snack", "name": "Snack Package", "includes": "Small chips, donut and water", "price": 23 }
+    ]
+}
