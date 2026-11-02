@@ -3,55 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosebank International Cafeteria | GALLERY</title>
+    <!-- Security: only allow content from my own files, jQuery and Google Maps -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com; style-src 'self'; img-src 'self' data:; frame-src https://www.google.com; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Gallery | Rosebank Cafeteria Photos and Meals</title>
+    <meta name="description" content="Browse photos of the Rosebank International Cafeteria,
+     including our fresh meals, drinks and dining area. Click a photo to see it larger.">
+    <!-- Open Graph tags, used when the page is shared on social media -->
+    <meta property="og:title" content="Rosebank International Cafeteria | Affordable Student Meals">
+    <meta property="og:description" content="Fresh, affordable breakfast, lunch, snacks and drinks at the Pretoria Campus.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="image/Homepage.png">     
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
     <header>
+        <div class="header-top">
+            <a href="index.html">
+                <img src="image/rosebank-international-cafeteria-logo.png" alt="Rosebank International Cafeteria" class="site-logo">
+            </a>
+            <div class="header-text">
         <h1>ROSEBANK INTERNATIONAL CAFETERIA</h1>
-        <p><b>GREAT TASTE, FRIENDLY PRICES, HAPPY YOU. </b></p>
+    <p><b>GREAT TASTE, FRIENDLY PRICES, HAPPY YOU. </b></p>
+            </div>
+        </div>
     </header>
     <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776; MENU</label>
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="about.html">ABOUT US</a></li>
             <li><a href="menu.html">MENU</a></li>
+            <li><a href="enquiry.html">ENQUIRY</a></li>
             <li><a href="gallery.html">GALLERY</a></li>
             <li><a href="feedback.html">FEEDBACK</a></li>
             <li><a href="contact.html">CONTACT US</a></li>
+            <li><a href="cart.html">CART (<span id="cart-count">0</span>)</a></li>
         </ul>
     </nav>
     <main>
         <section>
             <h2>Gallery</h2>
+            <p>Take a look at our cafeteria photos, our fresh meals and our drinks at the Rosebank International Pretoria Campus.</p>
         </section>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="image/AboutGeneratedimage.png" alt="Interior of Rosebank Cafeteria" width="300" height="200">
+                <img src="image/cafeteria-interio.jpg" alt="Interior " width="300" height="300" loading="lazy">
             </div>
 
             <div class="gallery-item">
-                <img src="image/chickenandmayosandwich-500x500.jpg" alt="Chicken mayo sandwich" width="300" height="300">
+                <img src="image/study-session.jpg" alt="Student Study Session " width="300" height="300" loading="lazy">
             </div>
 
             <div class="gallery-item">
-                <img src="image/Homepage.png" alt="Rosebank Cafeteria homepage banner" width="300" height="300">
+                <img src="image/zimba-chips.png" alt="Zimba chips " width="300" height="300" loading="lazy">
             </div>
 
             <div class="gallery-item">
-                <img src="image/Donuts.jpg" alt="Fresh donuts on display" width="300" height="300">
+                <img src="image/ice-cream.png" alt="Flavoured Ice cream " width="300" height="300" loading="lazy">
             </div>
 
             <div class="gallery-item">
-                <img src="image/Juice.jpg" alt="Fresh fruit juice" width="300" height="300">
+                <img src="image/chickenand-mayo-sandwich-500x500.jpg" alt="Chicken mayo sandwich" width="300" height="300" loading="lazy">
             </div>
 
+            <div class="gallery-item">
+                <img src="image/Homepage.png" alt="Rosebank Cafeteria homepage banner" width="300" height="300" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="image/donuts.jpg" alt="Fresh donuts on display" width="300" height="300" loading="lazy">
+            </div>
+
+            <div class="gallery-item">
+                <img src="image/fruit-juice.jpg" alt="Fresh fruit " width="300" height="300" loading="lazy">
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Rosebank International Cafeteria. All rights reseverd.</p>
+    <p class="social-links">
+        Follow us:
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="#" id="share-whatsapp" target="_blank" rel="noopener">Share on WhatsApp</a>
+    </p>
+    <p>&copy; 2026 Rosebank International Cafeteria. All rights reserved.</p>
     </footer>
+
+    <!-- Lightbox, shows the clicked gallery image in a larger view when clicked -->
+    <div class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img src="" alt="" class="lightbox-image">
+        <p class="lightbox-caption"></p>
+    </div>
+
+    <button class="back-to-top">&#8593; TOP</button>
+    
+    <!-- jQuery library and custom JavaScript file for website interactivity -->
+     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+     <script src="js/script.js"></script>
 </body>
 </html>
