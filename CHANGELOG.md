@@ -130,3 +130,12 @@
 - Added an order confirmation with an order number, the meals and the total, and emptied the cart after the order
 - Added the Checkout and Order Placement section
 - Added the E-Commerce Features section and updated README
+
+- Pushed the website files to a GitHub repository
+- Deployed the website on Netlify and connected it to the GitHub repository
+- Replaced the example.com addresses in robots.txt and sitemap.xml with the live address
+- Added enquiry.html to sitemap.xml and excluded cart.html from the sitemap
+- Changed the og:image links to the full live address
+- Added the live website link and the GitHub link to the README
+- Added the Deployment and Submission section and 2 new references to the README
+- Tested every page on the live website to make sure the images, forms, cart and menu features work

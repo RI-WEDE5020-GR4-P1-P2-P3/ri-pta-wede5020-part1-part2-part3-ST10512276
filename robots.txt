@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
 Disallow: /docs/
+Disallow: /cart.html
 
-Sitemap: https://www.example.com/sitemap.xml
+Sitemap: https://rosebankinternationalcafeteria.netlify.app/sitemap.xml
+
+The robots.txt use the live website address
+(https://rosebankinternationalcafeteria.netlify.app/). 

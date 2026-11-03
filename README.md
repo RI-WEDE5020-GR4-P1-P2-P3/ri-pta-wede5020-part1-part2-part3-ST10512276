@@ -2,7 +2,9 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24304054&assignment_repo_type=AssignmentRepo)
 
 # Rosebank International Cafeteria 
-
+## Project Links
+- Live website: https://rosebankinternationalcafeteria.netlify.app/
+- GitHub repository: [https://github.com/RI-WEDE5020-GR4-P1-P2-P3/ri-pta-wede5020-part1-part2-part3-ST10512276]
 ## Project Context
 A multi-page HTML website for Rosebank International Cafeteria which is a hypothetical cafeteria. Built by Nyeleti Pertunia Mukhawana for WEDE5020 (Web Development) PoE.
 
@@ -191,6 +193,17 @@ and the total. The cart is then emptied and the item counter is reset. Customer 
 as plain text to prevent injected HTML from being executed. Because the website has no back-end
 server, the order is confirmed on the screen only and is not transmitted to the cafeteria. In a
 production system, the order would be sent to a server or an email service.
+
+## Deployment and Submission
+
+### GitHub Repository
+The website files are stored in a GitHub repository. The repository contains all HTML pages, the css,
+js, image, data and docs folders, the robots.txt and sitemap.xml files, the changelog and this README.
+
+### Live Website
+The website is deployed on Netlify, a free hosting platform. The repository is connected to Netlify, so
+every change pushed to the main branch is published automatically. The live address was added to
+robots.txt, sitemap.xml and the Open Graph image tags after the first deployment.
 
 ## References
 DataFlair, n.d. CSS Responsive Web Design Tutorial. [online] Available at: <https://data-flair.training/blogs/css-responsive-design/> [Accessed 18 September 2026].
